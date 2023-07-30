@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@100;200;400;500;800&display=swap");
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkpink: #ba4270;
+  --waterwhite: #fbfcfe;
+  --sanjuanblue: #36536b;
+  --sanjuanbluedark: #2b4255;
+  --darkblue: #1b262f;
+  --lightjuanblue: #6c8294;
+  --headerFont: "DM Serif Display", serif;
+  --primaryFont: "Public Sans", sans-serif;
+  --mainPaddingX: 16.5rem;
+}
+
+.darkpink {
+  background: var(--darkpink);
+}
+
+.lightjuanblue {
+  background: var(--lightjuanblue);
+}
+
+.darkblue {
+  background: var(--sanjuanbluedark);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 7.2rem;
+  line-height: 7.2rem;
+}
+
+h2 {
+  font-size: 5.6rem;
+  line-height: 5.6rem;
+}
+
+h3 {
+  font-size: 4.8rem;
+  line-height: 5.3rem;
+}
+
+h4 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+
+.h4-small {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  padding: 1.5rem 2.6rem;
+  font-size: 1.5rem;
+}
+
+.primary-btn {
+  background: var(--darkpink);
+  color: var(--waterwhite);
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.primary-btn:hover {
+  transform: scale(1, 1.2);
+  box-shadow: 12px 5px 25px var(--darkpink);
+}
+
+.dark-btn {
+  background: transparent;
+  color: var(--waterwhite);
+  border: 1px solid var(--waterwhite);
+}
+
+.transparent-btn {
+  background: transparent;
+  color: var(--waterwhite);
+  border: 2px solid var(--waterwhite);
+}
+
+.transparent-dark-btn {
+  background: transparent;
+  color: var(--sanjuanblue);
+  border: 2px solid var(--sanjuanblue);
+}
+
+.transparent-dark-btn:hover {
+  background: var(--sanjuanblue);
+  color: var(--waterwhite);
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.thin {
+  font-weight: 300;
+  margin: 3rem 0;
+}
+
+.pink-font {
+  color: var(--darkpink);
+}
+
+/* .dark-blue {
+  color: var(--darkBlueFont);
+} */
+
+.light-blue {
+  color: var(--lightBlueFont);
+}
+
+.header-font {
+  font-family: var(--headerFont);
+}
+
+.main-font {
+  font-family: var(--primaryFont);
+}
+
+.no-opacity {
+  opacity: 0;
+}
+
+@media screen and (max-width: 925px) {
+  :root {
+    --mainPaddingX: 3.9rem;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+    line-height: 3.4rem;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  :root {
+    --mainPaddingX: 1.9rem;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    line-height: 3.4rem;
+  }
+}

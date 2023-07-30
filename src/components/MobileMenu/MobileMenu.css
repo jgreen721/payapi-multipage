@@ -1,0 +1,48 @@
+.mobile-menu {
+  position: absolute;
+  background: var(--darkbg);
+  right: 0;
+  top: 0;
+  padding: 2rem;
+  transition: 0.2s ease;
+  transform: translateX(0rem);
+}
+
+.hide-mobile-menu {
+  transform: translateX(100rem);
+}
+
+.close-menu-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.close-menu-btn:hover {
+  transform: rotate(35deg);
+}
+
+.flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--waterwhite);
+}
+
+.mobile-menu-body {
+  padding: 4.3rem 0;
+}
+
+.mobile-menu-body,
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.mobile-link {
+  color: var(--lightFont);
+}

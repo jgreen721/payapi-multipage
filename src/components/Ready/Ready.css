@@ -1,0 +1,30 @@
+.ready-section {
+  display: flex;
+  padding: 9rem var(--mainPaddingX);
+}
+
+.ready-column {
+  flex: 1;
+}
+
+@media screen and (max-width: 950px) {
+  .ready-section {
+    display: block;
+    text-align: center;
+  }
+
+  /* .ready-column {
+    max-width: 44rem;
+    margin: 0 auto;
+  } */
+
+  .ready-column:first-child {
+    padding-bottom: 5.6rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .ready-section {
+    padding: 3rem var(--mainPaddingX);
+  }
+}

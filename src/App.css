@@ -1,0 +1,14 @@
+.app {
+  max-width: 144rem;
+  margin: 0 auto;
+  border: 2px solid black;
+  min-height: 100vh;
+  --darkbg: var(--darkblue);
+  --lightFont: var(--waterwhite);
+  --darkBlueFont: var(--sanjuanblue);
+  --lightBlueFont: var(--lightjuanblue);
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  background: #edf3f8;
+}

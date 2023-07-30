@@ -1,0 +1,77 @@
+.implements-section {
+  display: flex;
+  align-items: center;
+  padding: 3rem var(--mainPaddingX);
+  gap: 3rem;
+}
+
+.implements-column {
+  flex: 1;
+  padding-right: 6rem;
+  /* border: 3px solid green; */
+}
+
+.code-snippet-box {
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.code-snippet {
+  background: var(--darkblue);
+  color: var(--waterwhite);
+  /* border: 2px solid green; */
+  font-size: 1.5rem;
+  padding: 2rem;
+  /* border-radius: 0.8rem; */
+}
+
+.code-top-row {
+  background: var(--sanjuanblue);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.circle {
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 50%;
+  background: white;
+}
+
+.implements-header {
+  font-family: var(--headerFont);
+  margin-bottom: 3rem;
+  color: var(--darkBlueFont);
+}
+
+.implement-blurb {
+  font-family: var(--primaryFont);
+  color: var(--lightBlueFont);
+  /* padding-right: 5rem; */
+}
+
+@media screen and (max-width: 950px) {
+  .implements-section {
+    flex-direction: column;
+  }
+
+  .implements-column {
+    padding-right: 0rem;
+  }
+
+  .implements-column:nth-child(2) {
+    text-align: center;
+  }
+
+  .code-text {
+    font-size: 1rem;
+  }
+
+  .implements-header {
+    margin-bottom: 1.5rem;
+  }
+}
