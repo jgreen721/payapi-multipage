@@ -7,7 +7,7 @@
   padding: 2rem var(--mainPaddingX);
   font-family: var(--primaryFont);
   position: relative;
-  z-index: 5;
+  z-index: 50;
 }
 
 .navbar-column {

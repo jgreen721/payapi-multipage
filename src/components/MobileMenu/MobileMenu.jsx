@@ -14,17 +14,17 @@ const MobileMenu = ({showMobile, setShowMobile}) => {
         </div>
     <div className="mobile-menu-body">
         <ul className="mobile-links">
-            <li className="mobile-link-item">
+            <li onClick={()=>setShowMobile(false)} className="mobile-link-item">
                 <Link className="mobile-link" to="/pricing">
                     <h5>Pricing</h5>
                 </Link>
             </li>
-            <li className="mobile-link-item">
+            <li onClick={()=>setShowMobile(false)} className="mobile-link-item">
                 <Link className="mobile-link" to="/about">
                     <h5>About</h5>
                 </Link>
             </li>
-            <li className="mobile-link-item">
+            <li onClick={()=>setShowMobile(false)} className="mobile-link-item">
                 <Link className="mobile-link" to="/contact">
                     <h5>Contact</h5>
                 </Link>

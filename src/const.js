@@ -3,7 +3,10 @@ export const facebookIcon = "./assets/shared/desktop/facebook.svg";
 export const facebookHighlightIcon =
   "./assets/shared/desktop/facebookhighlight.svg";
 export const googleIcon = "./assets/shared/desktop/google.svg";
+export const googleDarkIcon = "./assets/shared/desktop/darkgoogle.svg";
 export const hewlettIcon = "./assets/shared/desktop/hewlett-packard.svg";
+export const hewlettDarkIcon =
+  "./assets/shared/desktop/darkhewlett-packard.svg";
 export const iconChecked = "./assets/shared/desktop/icon-check.svg";
 export const linkedInIcon = "./assets/shared/desktop/linkedin.svg";
 export const linkedInHighlightIcon =
@@ -14,6 +17,11 @@ export const microsoftIcon = "./assets/shared/desktop/microsoft.svg";
 export const nvidiaIcon = "./assets/shared/desktop/nvidia.svg";
 export const oracleIcon = "./assets/shared/desktop/oracle.svg";
 export const teslaIcon = "./assets/shared/desktop/tesla.svg";
+export const microsoftDarkIcon = "./assets/shared/desktop/darkmicrosoft.svg";
+export const nvidiaDarkIcon = "./assets/shared/desktop/darknvidia.svg";
+export const oracleDarkIcon = "./assets/shared/desktop/darkoracle.svg";
+export const teslaDarkIcon = "./assets/shared/desktop/darktesla.svg";
+
 export const twitterIcon = "./assets/shared/desktop/twitter.svg";
 export const twitterHighlightIcon =
   "./assets/shared/desktop/twitterhighlight.svg";

@@ -1,0 +1,25 @@
+.form-div {
+  padding: 1rem 0;
+}
+
+.contact-form-input {
+  background: transparent;
+  border: none;
+  padding: 1.25rem 0.5rem;
+  border-bottom: 1px solid var(--lightjuanblue);
+  margin: 0.25rem 0;
+  width: 100%;
+}
+
+.contact-textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--lightjuanblue);
+  resize: none;
+  background: transparent;
+  height: 10rem;
+}
+
+.contact-textarea::placeholder {
+  font-family: var(--primaryFont);
+}

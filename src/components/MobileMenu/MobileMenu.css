@@ -6,6 +6,7 @@
   padding: 2rem;
   transition: 0.2s ease;
   transform: translateX(0rem);
+  z-index: 100;
 }
 
 .hide-mobile-menu {
