@@ -15,7 +15,7 @@ const Hero = () => {
           <h1 className="home-hero-h1">Start building with our APIs for absolutely free.</h1>
           <div className="form-div">
             <input type="text" className="form-control" name="email" placeholder="Enter email address" />
-            <Btn className="absolute-right-btn">Schedule a Demo</Btn>
+            <Btn handleSubmit={()=>console.log("Dummy application: HeroBtn fired")} className="absolute-right-btn">Schedule a Demo</Btn>
             <p className="form-caption">Have any questions? <Link className="contact-link" to="/contact"><strong className="strong-bold">Contact Us</strong></Link></p>
           </div>
         </div>

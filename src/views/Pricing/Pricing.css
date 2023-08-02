@@ -66,12 +66,14 @@
   }
 }
 
-.pricing-view {
+.pricing-content-view {
   padding: 0 var(--mainPaddingX);
+  margin-top: 10rem;
 }
 .pricing-container {
   display: flex;
   gap: 2rem;
+
   margin-top: 10rem;
 }
 

@@ -49,11 +49,13 @@ const Pricing = () => {
               
             </div>
         </div>
+        <div className="pricing-content-view">
         <h1 className="pricing-h1-header dark-blue">Pricing</h1>
         <div className="pricing-container">
           {plans.map(plan=>(
             <Plan key={plan.id} plan={plan} />
           ))}
+        </div>
         </div>
         <Ready/>
     </div>

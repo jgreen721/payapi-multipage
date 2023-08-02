@@ -32,7 +32,7 @@ const Navbar = () => {
         </li>
     </ul>
 </div>
-<Btn className="btn primary-btn desktop-navbar-btn">Schedule a Demo</Btn>
+<Btn handleSubmit={()=>console.log("Dummy application: NavbarBtn fired")} className="btn primary-btn desktop-navbar-btn">Schedule a Demo</Btn>
 <button onClick={()=>setShowMobile(!showMobile)} className="mobile-menu-icon-btn">
 <img src={menuIcon} alt="menu-icon" className="mobile-menu-icon"/>
 </button>

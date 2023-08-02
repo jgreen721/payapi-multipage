@@ -1,5 +1,13 @@
 .form-div {
   padding: 1rem 0;
+  transform: scale(0);
+  animation: scaleinput 0.25s var(--i) forwards;
+}
+
+@keyframes scaleinput {
+  100% {
+    transform: scale(1);
+  }
 }
 
 .contact-form-input {
@@ -9,6 +17,19 @@
   border-bottom: 1px solid var(--lightjuanblue);
   margin: 0.25rem 0;
   width: 100%;
+  font-family: var(--primaryFont);
+  outline: none;
+  opacity: 75%;
+}
+
+.focus:focus {
+  color: var(--sanjuanbluedark);
+  border-bottom: 2px solid var(--sanjuanbluedark);
+  opacity: 100%;
+}
+
+.focus:focus::placeholder {
+  color: var(--sanjuanbluedark);
 }
 
 .contact-textarea {
@@ -18,8 +39,34 @@
   resize: none;
   background: transparent;
   height: 10rem;
+  outline: none;
+  font-family: var(--primaryFont);
+  opacity: 75%;
+}
+
+/* .contact-textarea:focus {
+  border-bottom: 1px solid var(--sanjuanbluedark);
 }
 
 .contact-textarea::placeholder {
   font-family: var(--primaryFont);
+} */
+
+.error-input::placeholder {
+  color: red;
+}
+
+.error-input {
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+.error {
+  color: red;
+  display: none;
+  font-weight: 200;
+}
+
+.show-error {
+  display: block;
 }

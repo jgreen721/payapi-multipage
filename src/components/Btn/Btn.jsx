@@ -1,9 +1,9 @@
 import React from 'react'
 // import 
 
-const Btn = ({className,children}) => {
+const Btn = ({className,children,handleSubmit}) => {
   return (
-    <button className={className}>
+    <button onClick={handleSubmit} className={className}>
         {children}
     </button>
   )

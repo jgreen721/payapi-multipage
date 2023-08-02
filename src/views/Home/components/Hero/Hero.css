@@ -48,7 +48,7 @@
 
 .absolute-right-btn {
   position: absolute;
-  top: 0;
+  top: 1rem;
   right: -1rem;
   background: var(--darkpink);
   color: var(--waterwhite);
@@ -61,8 +61,8 @@
 }
 
 .absolute-right-btn:hover {
-  right: 2rem;
-  transform: scale(1.02);
+  right: 0.5rem;
+  transform: scale(1.08);
   box-shadow: 2px 3px 20px var(--darkpink);
 }
 

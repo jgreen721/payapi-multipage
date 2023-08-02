@@ -18,6 +18,10 @@
     margin: 0 auto;
   } */
 
+  .form-div {
+    margin: 0 auto;
+  }
+
   .ready-column:first-child {
     padding-bottom: 5.6rem;
   }

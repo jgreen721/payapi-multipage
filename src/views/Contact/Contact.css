@@ -2,7 +2,7 @@
   position: relative;
   z-index: 100;
   padding: 3rem var(--mainPaddingX);
-  border: 5px solid red;
+  /* border: 5px solid red; */
 }
 
 .contact-top-section {
@@ -12,7 +12,7 @@
 
 .contact-column:first-child {
   flex: 1;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   padding: 3rem;
 }
 
@@ -23,8 +23,8 @@
 }
 
 .checkbox {
-  height: 2.8rem;
-  width: 2.8rem;
+  height: 28px;
+  width: 28px;
   background: rgb(164, 176, 196);
   border-radius: 0.25rem;
   cursor: pointer;
@@ -59,11 +59,12 @@
 
 .contact-column:nth-child(2) {
   flex: 3;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 4rem;
 }
 
 .contact-associates-list {
@@ -87,5 +88,22 @@
 
   .contact-associates-header {
     text-align: center;
+  }
+
+  .contact-column:nth-child(2) {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .contact-associates-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 4rem 0;
+  }
+
+  .checkbox {
+    width: 50px;
   }
 }

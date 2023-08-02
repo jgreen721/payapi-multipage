@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useRef, useEffect} from 'react'
 import { FeatureItem } from '..'
 import {Btn} from "../../../../components"
 import {useObserver} from "../../../../hooks/useObserver"
@@ -6,6 +6,20 @@ import {useObserver} from "../../../../hooks/useObserver"
 const Plan = ({plan}) => {
   const planRef = useRef();
   const {inView} = useObserver(planRef,"show-plan")
+
+  useEffect(()=>{
+    if(innerWidth > 675){
+      console.log("Attach class -- ",innerWidth);
+      planRef.current.classList.add("show-plan");
+    }
+    if(plan.id == 1){
+      planRef.current.classList.add("show-plan");
+
+    }
+  },[]);
+
+
+
   return (
     <div style={{'--i':plan.delay}} className="plan-container">
       <div ref={planRef} className="plan-content-container">
@@ -17,7 +31,7 @@ const Plan = ({plan}) => {
                 <FeatureItem inView={inView} key={featureItem.id} item={featureItem} delay ={`${(2 + idx/5).toFixed(2)}s`}/>
             ))}
         </ul>
-        <Btn className="btn transparent-dark-btn">Request Access</Btn>
+        <Btn handleSubmit={()=>console.log("Dummy application: Plan Component fired")} className="btn transparent-dark-btn">Request Access</Btn>
         </div>
     </div>
   )
