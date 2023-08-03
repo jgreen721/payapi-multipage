@@ -1,7 +1,11 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useLayoutEffect} from 'react'
 import { Ready,FormInput, Btn } from '../../components'
+import {gsap} from "gsap";
+import emailjs from "emailjs-com";
 import "./Contact.css"
 import {teslaDarkIcon,microsoftDarkIcon,hewlettDarkIcon,oracleDarkIcon,googleDarkIcon,nvidiaDarkIcon} from "../../const"
+import AssociateItem from './components/AssociateItem';
+
 
 const Contact = () => {
   const [subscribe, setSubscribe] = useState(false)
@@ -27,6 +31,7 @@ const Contact = () => {
   const formRef = useRef();
 
 
+
   const handleSubmit=(e)=>{
     e.preventDefault();
     console.log("user submitted form --\n NEXT: validate form")
@@ -42,17 +47,61 @@ const Contact = () => {
        message:formData.get("Message"),
      }
      console.log(userInfo)
-     validateUser(userInfo);
+     if(!validateUser(userInfo)){
+       console.log("Error in form: validateUser() -- break out of function");
+       return;
+     }
+     if(hasUsedEmail()){
+       console.log("Error -- user has already signed up for service, no reason to accrue api costs on unnecessary email api service.");
+       return;
+     }
+
+     
+     handleEmail(userInfo)
+
+     
+  }
+
+
+  function hasUsedEmail(){
+    if(localStorage['hasEmailed']){
+      console.log("user has 'received' email already.");
+      return true;
+    }
+    return false;
+  }
+
+  function handleEmail(formData){
+    console.log('handle Email fired!')
+
+    const serviceID = 'service_rozru8a';
+    const templateID = 'template_20wrm3t';
+    const userID = "tcrTKSXuJg0Ubk8Ql";
+
+    emailjs.send(serviceID, templateID, formData, userID)
+      .then((response) => {
+        console.log("Email sent successfully!", response);
+        // Add any success message or action you want to take after successful email send
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        // Add any error handling or messages you want to show in case of failure
+      });
+
   }
 
 
   function validateUser(user){
+    let isValid = true
       for(let i in user){
         if(user[i] == ''){
           console.log("Invalid input at field of " + i)
           setFormFields((formFields)=>formFields.map(f=>f.serialize == i ? {...f,hasError:true} : f));
+           isValid = false;
         }
       }
+
+      return isValid
   }
 
 
@@ -88,9 +137,7 @@ const Contact = () => {
               <h4 className="main-font h4-small dark-blue contact-associates-header">Join the thousands of innovators already building with us</h4>
               <ul className="contact-associates-list">
                 {associates.map(a=>(
-                  <li key={a.id} className="contact-associate-item">
-                    <img src={a.icon} alt="icon" className="associate-icon"/>
-                  </li>
+                <AssociateItem key={a.id} associateItem={a}/>
                 ))}
               </ul>
             </div>

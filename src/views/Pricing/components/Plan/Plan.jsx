@@ -8,6 +8,7 @@ const Plan = ({plan}) => {
   const {inView} = useObserver(planRef,"show-plan")
 
   useEffect(()=>{
+    //useObserver 'debugging' for edge cases
     if(innerWidth > 675){
       console.log("Attach class -- ",innerWidth);
       planRef.current.classList.add("show-plan");
